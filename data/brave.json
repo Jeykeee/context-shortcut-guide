@@ -1,0 +1,113 @@
+{
+    "aplicacion": "Brave Browser",
+    "categorias": [
+        {
+            "nombre": "Pestañas",
+            "atajos": [
+                {
+                    "teclas": "Ctrl + T",
+                    "descripcion": "Abrir nueva pestaña"
+                },
+                {
+                    "teclas": "Ctrl + W",
+                    "descripcion": "Cerrar pestaña actual"
+                },
+                {
+                    "teclas": "Ctrl + Shift + T",
+                    "descripcion": "Reabrir última pestaña cerrada"
+                },
+                {
+                    "teclas": "Ctrl + Tab",
+                    "descripcion": "Ir a la siguiente pestaña"
+                },
+                {
+                    "teclas": "Ctrl + Shift + Tab",
+                    "descripcion": "Ir a la pestaña anterior"
+                },
+                {
+                    "teclas": "Ctrl + 1 al 8",
+                    "descripcion": "Ir directamente a esa pestaña por número"
+                },
+                {
+                    "teclas": "Ctrl + 9",
+                    "descripcion": "Ir a la última pestaña"
+                }
+            ]
+        },
+        {
+            "nombre": "Navegación",
+            "atajos": [
+                {
+                    "teclas": "Alt + Flecha Izquierda",
+                    "descripcion": "Ir a la página anterior"
+                },
+                {
+                    "teclas": "Alt + Flecha Derecha",
+                    "descripcion": "Ir a la página siguiente"
+                },
+                {
+                    "teclas": "F5",
+                    "descripcion": "Recargar la página"
+                },
+                {
+                    "teclas": "Ctrl + Shift + R",
+                    "descripcion": "Recargar ignorando el caché"
+                },
+                {
+                    "teclas": "Ctrl + L",
+                    "descripcion": "Seleccionar la barra de direcciones"
+                },
+                {
+                    "teclas": "Ctrl + F",
+                    "descripcion": "Buscar texto en la página"
+                },
+                {
+                    "teclas": "Ctrl + D",
+                    "descripcion": "Guardar página en marcadores"
+                }
+            ]
+        },
+        {
+            "nombre": "Ventanas",
+            "atajos": [
+                {
+                    "teclas": "Ctrl + N",
+                    "descripcion": "Abrir nueva ventana"
+                },
+                {
+                    "teclas": "Ctrl + Shift + N",
+                    "descripcion": "Abrir ventana privada"
+                },
+                {
+                    "teclas": "Ctrl + Shift + W",
+                    "descripcion": "Cerrar ventana actual"
+                },
+                {
+                    "teclas": "F11",
+                    "descripcion": "Activar o desactivar pantalla completa"
+                }
+            ]
+        },
+        {
+            "nombre": "Herramientas",
+            "atajos": [
+                {
+                    "teclas": "Ctrl + Shift + I",
+                    "descripcion": "Abrir herramientas de desarrollador"
+                },
+                {
+                    "teclas": "Ctrl + U",
+                    "descripcion": "Ver código fuente de la página"
+                },
+                {
+                    "teclas": "Ctrl + Shift + J",
+                    "descripcion": "Abrir consola de desarrollador"
+                },
+                {
+                    "teclas": "Ctrl + Shift + Delete",
+                    "descripcion": "Abrir limpieza de datos de navegación"
+                }
+            ]
+        }
+    ]
+}

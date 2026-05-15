@@ -1,0 +1,130 @@
+{
+    "aplicacion": "Windows - Atajos del Sistema",
+    "categorias": [
+        {
+            "nombre": "Sistema y Administración",
+            "atajos": [
+                {
+                    "teclas": "Ctrl + Shift + Esc",
+                    "descripcion": "Abrir Administrador de Tareas directamente"
+                },
+                {
+                    "teclas": "Ctrl + Alt + Supr",
+                    "descripcion": "Pantalla de seguridad de Windows"
+                },
+                {
+                    "teclas": "Win + R",
+                    "descripcion": "Abrir cuadro Ejecutar"
+                },
+                {
+                    "teclas": "Win + X",
+                    "descripcion": "Menú de herramientas avanzadas del sistema"
+                },
+                {
+                    "teclas": "Win + Pausa",
+                    "descripcion": "Abrir propiedades del sistema"
+                }
+            ]
+        },
+        {
+            "nombre": "Gestión de Ventanas",
+            "atajos": [
+                {
+                    "teclas": "Win + D",
+                    "descripcion": "Mostrar u ocultar el escritorio"
+                },
+                {
+                    "teclas": "Win + M",
+                    "descripcion": "Minimizar todas las ventanas"
+                },
+                {
+                    "teclas": "Win + Flecha Arriba",
+                    "descripcion": "Maximizar ventana activa"
+                },
+                {
+                    "teclas": "Win + Flecha Abajo",
+                    "descripcion": "Minimizar ventana activa"
+                },
+                {
+                    "teclas": "Win + Flecha Izquierda",
+                    "descripcion": "Anclar ventana a la mitad izquierda"
+                },
+                {
+                    "teclas": "Win + Flecha Derecha",
+                    "descripcion": "Anclar ventana a la mitad derecha"
+                },
+                {
+                    "teclas": "Alt + F4",
+                    "descripcion": "Cerrar la ventana activa"
+                },
+                {
+                    "teclas": "Alt + Tab",
+                    "descripcion": "Cambiar entre ventanas abiertas"
+                }
+            ]
+        },
+        {
+            "nombre": "Escritorios Virtuales",
+            "atajos": [
+                {
+                    "teclas": "Win + Tab",
+                    "descripcion": "Vista de tareas y escritorios virtuales"
+                },
+                {
+                    "teclas": "Win + Ctrl + D",
+                    "descripcion": "Crear nuevo escritorio virtual"
+                },
+                {
+                    "teclas": "Win + Ctrl + Flecha Derecha",
+                    "descripcion": "Cambiar al escritorio virtual siguiente"
+                },
+                {
+                    "teclas": "Win + Ctrl + Flecha Izquierda",
+                    "descripcion": "Cambiar al escritorio virtual anterior"
+                },
+                {
+                    "teclas": "Win + Ctrl + F4",
+                    "descripcion": "Cerrar escritorio virtual actual"
+                }
+            ]
+        },
+        {
+            "nombre": "Capturas y Portapapeles",
+            "atajos": [
+                {
+                    "teclas": "Win + Shift + S",
+                    "descripcion": "Captura de pantalla recortada"
+                },
+                {
+                    "teclas": "Print Screen",
+                    "descripcion": "Captura de pantalla completa al portapapeles"
+                },
+                {
+                    "teclas": "Win + V",
+                    "descripcion": "Abrir historial del portapapeles"
+                }
+            ]
+        },
+        {
+            "nombre": "Accesibilidad",
+            "atajos": [
+                {
+                    "teclas": "Win + U",
+                    "descripcion": "Abrir configuración de accesibilidad"
+                },
+                {
+                    "teclas": "Win + + (más)",
+                    "descripcion": "Activar lupa y aumentar zoom"
+                },
+                {
+                    "teclas": "Win + - (menos)",
+                    "descripcion": "Reducir zoom de la lupa"
+                },
+                {
+                    "teclas": "Win + Esc",
+                    "descripcion": "Cerrar la lupa"
+                }
+            ]
+        }
+    ]
+}

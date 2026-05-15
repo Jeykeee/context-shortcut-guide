@@ -1,0 +1,117 @@
+{
+    "aplicacion": "Visual Studio Code",
+    "categorias": [
+        {
+            "nombre": "Edición",
+            "atajos": [
+                {
+                    "teclas": "Ctrl + C",
+                    "descripcion": "Copiar línea completa si no hay selección"
+                },
+                {
+                    "teclas": "Ctrl + X",
+                    "descripcion": "Cortar línea completa si no hay selección"
+                },
+                {
+                    "teclas": "Ctrl + Shift + K",
+                    "descripcion": "Eliminar línea actual"
+                },
+                {
+                    "teclas": "Alt + Flecha Arriba",
+                    "descripcion": "Mover línea hacia arriba"
+                },
+                {
+                    "teclas": "Alt + Flecha Abajo",
+                    "descripcion": "Mover línea hacia abajo"
+                },
+                {
+                    "teclas": "Ctrl + D",
+                    "descripcion": "Seleccionar siguiente ocurrencia de la palabra"
+                },
+                {
+                    "teclas": "Ctrl + Shift + L",
+                    "descripcion": "Seleccionar todas las ocurrencias de la palabra"
+                },
+                {
+                    "teclas": "Alt + Click",
+                    "descripcion": "Agregar cursor adicional para edición múltiple"
+                },
+                {
+                    "teclas": "Ctrl + Z",
+                    "descripcion": "Deshacer"
+                },
+                {
+                    "teclas": "Ctrl + Shift + Z",
+                    "descripcion": "Rehacer"
+                }
+            ]
+        },
+        {
+            "nombre": "Terminal",
+            "atajos": [
+                {
+                    "teclas": "Ctrl + `",
+                    "descripcion": "Abrir o cerrar la terminal integrada"
+                },
+                {
+                    "teclas": "Ctrl + Shift + `",
+                    "descripcion": "Abrir nueva terminal"
+                },
+                {
+                    "teclas": "Ctrl + C",
+                    "descripcion": "Interrumpir el proceso en ejecución"
+                }
+            ]
+        },
+        {
+            "nombre": "Paneles y Navegación",
+            "atajos": [
+                {
+                    "teclas": "Ctrl + B",
+                    "descripcion": "Mostrar u ocultar el panel lateral"
+                },
+                {
+                    "teclas": "Ctrl + Shift + E",
+                    "descripcion": "Abrir explorador de archivos"
+                },
+                {
+                    "teclas": "Ctrl + Shift + F",
+                    "descripcion": "Abrir búsqueda global en el proyecto"
+                },
+                {
+                    "teclas": "Ctrl + Shift + G",
+                    "descripcion": "Abrir panel de control de versiones Git"
+                },
+                {
+                    "teclas": "Ctrl + P",
+                    "descripcion": "Buscar y abrir archivo por nombre"
+                },
+                {
+                    "teclas": "Ctrl + Shift + P",
+                    "descripcion": "Abrir paleta de comandos"
+                }
+            ]
+        },
+        {
+            "nombre": "Ventanas y Pestañas",
+            "atajos": [
+                {
+                    "teclas": "Ctrl + W",
+                    "descripcion": "Cerrar pestaña actual"
+                },
+                {
+                    "teclas": "Ctrl + Tab",
+                    "descripcion": "Cambiar entre pestañas abiertas"
+                },
+                {
+                    "teclas": "Ctrl + \\",
+                    "descripcion": "Dividir editor en dos paneles"
+                },
+                {
+                    "teclas": "Ctrl + K Z",
+                    "descripcion": "Activar modo Zen sin distracciones"
+                }
+            ]
+        }
+    ]
+}

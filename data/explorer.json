@@ -1,0 +1,92 @@
+{
+    "aplicacion": "Explorador de Archivos",
+    "categorias": [
+        {
+            "nombre": "Navegación",
+            "atajos": [
+                {
+                    "teclas": "Alt + Flecha Izquierda",
+                    "descripcion": "Ir a la carpeta anterior"
+                },
+                {
+                    "teclas": "Alt + Flecha Derecha",
+                    "descripcion": "Ir a la carpeta siguiente"
+                },
+                {
+                    "teclas": "Alt + Flecha Arriba",
+                    "descripcion": "Subir a la carpeta superior"
+                },
+                {
+                    "teclas": "Ctrl + L",
+                    "descripcion": "Seleccionar la barra de direcciones"
+                },
+                {
+                    "teclas": "F5",
+                    "descripcion": "Actualizar el contenido de la carpeta"
+                }
+            ]
+        },
+        {
+            "nombre": "Gestión de Archivos",
+            "atajos": [
+                {
+                    "teclas": "F2",
+                    "descripcion": "Renombrar archivo o carpeta seleccionado"
+                },
+                {
+                    "teclas": "Ctrl + C",
+                    "descripcion": "Copiar archivo o carpeta seleccionado"
+                },
+                {
+                    "teclas": "Ctrl + X",
+                    "descripcion": "Cortar archivo o carpeta seleccionado"
+                },
+                {
+                    "teclas": "Ctrl + V",
+                    "descripcion": "Pegar archivo o carpeta"
+                },
+                {
+                    "teclas": "Delete",
+                    "descripcion": "Enviar al reciclaje"
+                },
+                {
+                    "teclas": "Shift + Delete",
+                    "descripcion": "Eliminar permanentemente sin pasar por reciclaje"
+                },
+                {
+                    "teclas": "Ctrl + Z",
+                    "descripcion": "Deshacer última acción"
+                },
+                {
+                    "teclas": "Ctrl + Shift + N",
+                    "descripcion": "Crear nueva carpeta"
+                }
+            ]
+        },
+        {
+            "nombre": "Selección y Visualización",
+            "atajos": [
+                {
+                    "teclas": "Ctrl + A",
+                    "descripcion": "Seleccionar todos los archivos"
+                },
+                {
+                    "teclas": "Ctrl + Click",
+                    "descripcion": "Seleccionar archivos individuales"
+                },
+                {
+                    "teclas": "Shift + Click",
+                    "descripcion": "Seleccionar rango de archivos"
+                },
+                {
+                    "teclas": "Alt + P",
+                    "descripcion": "Mostrar u ocultar panel de vista previa"
+                },
+                {
+                    "teclas": "Ctrl + Shift + 1 al 8",
+                    "descripcion": "Cambiar el tipo de vista de la carpeta"
+                }
+            ]
+        }
+    ]
+}
