@@ -1,0 +1,16 @@
+# ============================================================
+# Dependencias del proyecto ContextShortcut Guide
+# Instalar con: pip install -r requerimientos.txt
+# ============================================================
+
+# Permite escuchar combinaciones de teclas a nivel global del sistema.
+# Funciona aunque el programa esté en segundo plano o minimizado.
+keyboard==0.13.5
+
+# Puente entre Python y las APIs internas de Windows (Win32 API).
+# Lo usamos para obtener el identificador y proceso de la ventana activa.
+pywin32==306
+
+# Utilidades de procesos del sistema operativo.
+# Lo usamos para traducir el ID de proceso al nombre del ejecutable .exe
+psutil==5.9.8
