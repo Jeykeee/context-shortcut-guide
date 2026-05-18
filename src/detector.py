@@ -7,7 +7,7 @@ import keyboard #Para escuchar combinaciones de teclas globales
 APLICACIONES_RECONOCIDAS = {
     "brave.exe": "brave",
     "code.exe": "vscode",
-    "explorer.exe": "explorador",
+    "explorer.exe": "explorer",
 }
 APP_POR_DEFECTO= "windows"   #Devuelve por defecto atajos de windows
 #El atajo elegido
@@ -53,6 +53,8 @@ def detectar_app_activa():
     handle = obtener_ventana_activa() #El handle de la ventana activa
     pid = obtener_pid(handle) #PID del dueño de la ventana
     nombre_ejecutable = obtener_nombre_ejecutable(pid) #nombre del ejecutable
+    # Debug temporal — muestra el ejecutable real detectado
+    print(f"[Debug] Ejecutable detectado: {nombre_ejecutable}")
     #Si cualquier paso devolvio none usamos fallback
     if not nombre_ejecutable:
         return APP_POR_DEFECTO
