@@ -21,9 +21,12 @@ def iniciar_programa():
     print(" Presiona Ctrl+Alt+H en cualquier app")
     print(" para ver sus atajos de teclado")
     print("=" * 45)
-    #Aqui bloqueamos el programa manteniendo en espera indefinidamente
-    detector.iniciar_escucha(al_presionar_hotkey)
-
+    try:
+        detector.iniciar_escucha(al_presionar_hotkey)
+    except KeyboardInterrupt:
+        # Cuando el usuario presiona Ctrl+C caemos acá
+        # en vez de mostrar el error feo
+        print("\n[ContextShortcut] Programa cerrado correctamente")
 #Bloque para que arranque cuando lo ejecuto proteccion importante
 if __name__=="__main__" :
     iniciar_programa()
