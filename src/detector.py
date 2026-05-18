@@ -23,17 +23,23 @@ def obtener_ventana_activa():
 def obtener_pid(handle):
     #Dado el handle devolver el PID
     #Devuelve dos valores a la vez el id del hilo que creo la ventana y el id del proceso dueño de la ventana
+    #handle 0 significa que no hay ventana activa
+    if not handle:
+        return None
     _, pid=win32process.GetWindowThreadProcessId(handle) #Con el _, descartamos el primer valor solo importa el PID
     return pid
 
 def obtener_nombre_ejecutable(pid):
-    #Dado el PID devuelve el nombre del ejecutable
-    #Crea objeto que representa ese proceso y da acceso a su informacion
-    proceso= psutil.Process(pid)
-    #con name devolvemos el nombre del ejecutable
-    #con lower lo convierte a minusculas para evitar problemas
-    nombre = proceso.name().lower()
-    return nombre
+    #Verficamos que PID sea valido
+    if not pid:
+        return None
+    try:
+        #El try/except atrapa el caso en que el proceso desaparecio entre que obtuvimos pid y esa linea
+        proceso = psutil.Process(pid)
+        nombre = proceso.name().lower()
+        return nombre
+    except psutil.NoSuchProcess:
+        return None
 
 def traducir_a_nombre_app(nombre_ejecutable):
     #Traduce el nombre del ejecutable al que usamos 
@@ -44,9 +50,12 @@ def traducir_a_nombre_app(nombre_ejecutable):
 
 def detectar_app_activa():
     #Combina los pasos
-    handle = obtener_ventana_activa #El handle de la ventana activa
+    handle = obtener_ventana_activa() #El handle de la ventana activa
     pid = obtener_pid(handle) #PID del dueño de la ventana
     nombre_ejecutable = obtener_nombre_ejecutable(pid) #nombre del ejecutable
+    #Si cualquier paso devolvio none usamos fallback
+    if not nombre_ejecutable:
+        return APP_POR_DEFECTO
     nombre_app = traducir_a_nombre_app(nombre_ejecutable) #traduce a la del programa
     return nombre_app
 
