@@ -64,28 +64,45 @@ def mostrar_ventana(nombre_app):
     alto_pantalla = ventana.winfo_screenheight()
 
     #El tamaño que queremos para la ventana
-    ancho_ventana = 600
-    alto_ventana = 500
+    ancho_ventana = 780
+    alto_ventana = 680
 
     #Calculamos la posicion x e y para que quede centrada
     #Formula :(tam_pantalla - tam_ventana) / 2
     posicion_x = (ancho_pantalla - ancho_ventana) // 2
-    posicion_y = (ancho_pantalla - ancho_ventana) // 2
+    posicion_y = (alto_pantalla - alto_ventana) // 3
 
     #geometry definde tam y pos en formato ancho x alto + x + y
     ventana.geometry(f"{ancho_ventana}x{alto_ventana}+{posicion_x}+{posicion_y}")
 
     #Titulo principal de la ventana
+    # Barra de título personalizada — contiene el título y el botón X
+    barra_titulo = tk.Frame(ventana, bg=COLOR_CATEGORIA)
+    barra_titulo.pack(fill="x")
     titulo = tk.Label(
-        ventana, #pertenece a la ventana principal
-        text=datos["aplicacion"], #texto del titulo - nombre de la app
+        barra_titulo, #pertenece a la ventana principal
+        text=f" {datos['aplicacion']}", #texto del titulo - nombre de la app
         font=FUENTE_TITULO,
         bg=COLOR_FONDO,
         fg=COLOR_TITULO_VENTANA,
-        pady=12 #espacio vertical interno
+        pady=10 #espacio vertical interno
     )
-    titulo.pack() #pack coloca el widget en la venta de arriba hacia abajo
+    titulo.pack(side="left") #pack coloca el widget en la venta de arriba hacia abajo
 
+    # Botón X a la derecha para cerrar la ventana
+    boton_cerrar = tk.Button(
+        barra_titulo,
+        text="  ✕  ",
+        font=("Segoe UI", 11, "bold"),
+        bg=COLOR_CATEGORIA,
+        fg="#f38ba8",        # rojo suave — visible sin ser agresivo
+        bd=0,                # sin borde
+        activebackground="#f38ba8",  # fondo al pasar el mouse
+        activeforeground=COLOR_FONDO,
+        cursor="hand2",      # cursor de manito al pasar por encima
+        command=ventana.destroy  # cierra la ventana al hacer clic
+    )
+    boton_cerrar.pack(side="right")
     #Scroll
     #Con canvas con scrollbar para si hay muchas se pueda hacer scroll sin que se corten
 
@@ -146,7 +163,7 @@ def mostrar_ventana(nombre_app):
             #Columna izquierda - las teclas
             tk.Label(
                 fila,
-                text=atajo["teclado"],
+                text=atajo["teclas"],
                 font=FUENTE_ATAJO,
                 bg=COLOR_CATEGORIA,
                 fg=COLOR_TECLAS,
@@ -170,6 +187,22 @@ def mostrar_ventana(nombre_app):
     #Asi la scrollbar sabe hasta donde
     frame_contenido.update_idletasks()
     canvas.configure(scrollregion=canvas.bbox("all"))
+    # Conecta el scroll del mouse/touchpad al canvas
+    # event.delta es la velocidad del scroll — dividimos por 120
+    # porque Windows lo manda en múltiplos de 120
+    def al_hacer_scroll(event):
+        canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+
+    # bind_all escucha el evento en toda la ventana no solo en el canvas
+    # asi funciona aunque el mouse este sobre una categoria
+    ventana.bind_all("<MouseWheel>", al_hacer_scroll)
+        # Scroll con teclas de flecha arriba y abajo
+    ventana.bind("<Up>",   lambda e: canvas.yview_scroll(-1, "units"))
+    ventana.bind("<Down>", lambda e: canvas.yview_scroll(1,  "units"))
+
+    # Scroll más rápido con Re Pág y Av Pág
+    ventana.bind("<Prior>", lambda e: canvas.yview_scroll(-5, "units"))
+    ventana.bind("<Next>",  lambda e: canvas.yview_scroll(5,  "units"))
 
     #Cerrar la ventana al presionar Esc - sin salir del programa principal
     #bind conecta un evento =tecla Esc con una funcion = cerrar ventana
